@@ -2,19 +2,19 @@ const container = document.getElementById("book");
 
 const isMobile = window.innerWidth < 768;
 
-const bookWidth = isMobile
-    ? window.innerWidth * 0.95
-    : Math.min(850, window.innerWidth * 0.8);
+// 📱 Celular
+const mobileWidth = 320;
+const mobileHeight = 480;
 
-const bookHeight = isMobile
-    ? bookWidth * 1.5
-    : bookWidth * 1.3;
+// 💻 Monitor / PC
+const desktopWidth = 800;
+const desktopHeight = 1040;
 
 const pageFlip = new St.PageFlip(container, {
-    width: bookWidth,
-    height: bookHeight,
+    width: isMobile ? mobileWidth : desktopWidth,
+    height: isMobile ? mobileHeight : desktopHeight,
     showCover: true,
-    size: "stretch",
+    size: "fixed",
     mobileScrollSupport: true
 });
 
