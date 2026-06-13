@@ -7,8 +7,8 @@ const mobileWidth = 320;
 const mobileHeight = 480;
 
 // 💻 Monitor / PC
-const desktopWidth = 800;
-const desktopHeight = 1040;
+const desktopWidth = 700;
+const desktopHeight = 900;
 
 const pageFlip = new St.PageFlip(container, {
     width: isMobile ? mobileWidth : desktopWidth,
